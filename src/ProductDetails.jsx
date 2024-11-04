@@ -5,7 +5,7 @@ import { IoCartOutline, IoEllipseSharp } from "react-icons/io5";
 import { Rating, Star } from '@smastrom/react-rating'
 
 import '@smastrom/react-rating/style.css'
-import { CartContext } from './Root';
+import { CartContext, WishListContext } from './Root';
 const myStyles = {
     itemShapes: Star,
     activeFillColor: '#ffb700',
@@ -19,8 +19,9 @@ const ProductDetails = () => {
 
     const { product_id, product_title, product_image, category, price, description, Specification, availability, rating } = singleData
 
+    // context api
     const {cartItem, setCartItem} = useContext(CartContext)
-    console.log(cartItem);
+    const {wishItem, setWishItem} = useContext(WishListContext)
     
     const handleAddToCart = (gadget) =>{
         const isExist = cartItem.find((item)=>item.product_id == gadget.product_id)
@@ -33,6 +34,17 @@ const ProductDetails = () => {
         
         
         
+    }
+    
+    const handleWishList = (gadget) =>{
+        const isExist = wishItem.find((item)=>item.product_id == gadget.product_id)
+        if (isExist) {
+            return alert('already exist')
+        }
+        else{
+            setWishItem([...wishItem,gadget])
+        }
+               
     }
 
     
@@ -83,7 +95,9 @@ const ProductDetails = () => {
                                     <button
                                     onClick={()=>handleAddToCart(singleData)} 
                                     className='btn flex items-center gap-2 bg-[#9538E2] text-white rounded-3xl hover:bg-transparent hover:text-black'><span>Add To Card</span><span><IoCartOutline /></span></button>
-                                    <button><FaRegHeart /></button>
+                                    <button
+                                    onClick={()=>handleWishList(singleData)}
+                                    ><FaRegHeart /></button>
                                 </div>
                             </div>
                         </div>

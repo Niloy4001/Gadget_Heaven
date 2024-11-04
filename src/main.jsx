@@ -10,6 +10,8 @@ import Home from './Home';
 import Cards from './Cards';
 import ProductDetails from './ProductDetails';
 import ErrorPage from './ErrorPage';
+import Dashboard from './Dashboard';
+import Statistics from './Statistics';
 
 
 
@@ -19,28 +21,36 @@ const router = createBrowserRouter([
     element: <Root></Root>,
     children: [
       {
-        path:"/",
+        path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('/category.json'),
+        loader: () => fetch('/category.json'),
         // errorElement: <ErrorPage></ErrorPage>,
-        children:[
+        children: [
           {
-            path:"/",
-            element:<Cards></Cards>,
-            loader: ()=> fetch('/gadgets.json'),
+            path: "/",
+            element: <Cards></Cards>,
+            loader: () => fetch('/gadgets.json'),
           },
           {
-            path:"/category/:category",
-            element:<Cards></Cards>,
-            loader: ()=> fetch('/gadgets.json'),
+            path: "/category/:category",
+            element: <Cards></Cards>,
+            loader: () => fetch('/gadgets.json'),
           },
         ],
-       
+
       },
       {
         path: "/details/:id",
         element: <ProductDetails></ProductDetails>,
-        loader: ()=> fetch('/gadgets.json'),
+        loader: () => fetch('/gadgets.json'),
+      },
+      {
+        path: "/statistics",
+        element: <Statistics></Statistics>
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard></Dashboard>
       },
     ]
   },
