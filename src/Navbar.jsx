@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaRegHeart } from "react-icons/fa";
 import { ImMenu3 } from "react-icons/im";
+import { CartContext } from './Root';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
     const handleMenu = ()=>{
         setOpen(!open)
     }
+
+
+    const {cartItem, setCartItem} = useContext(CartContext)
+    console.log(cartItem.length);
+    
     return (
         <div className="navbar flex justify-between py-8  w-[90%] mx-auto gap-4">
             <div className="flex">

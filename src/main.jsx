@@ -9,6 +9,7 @@ import Root from './Root';
 import Home from './Home';
 import Cards from './Cards';
 import ProductDetails from './ProductDetails';
+import ErrorPage from './ErrorPage';
 
 
 
@@ -20,25 +21,27 @@ const router = createBrowserRouter([
       {
         path:"/",
         element: <Home></Home>,
-        loader: ()=> fetch('../category.json'),
+        loader: ()=> fetch('/category.json'),
+        // errorElement: <ErrorPage></ErrorPage>,
         children:[
           {
             path:"/",
             element:<Cards></Cards>,
-            loader: ()=> fetch('../gadgets.json'),
+            loader: ()=> fetch('/gadgets.json'),
           },
           {
             path:"/category/:category",
             element:<Cards></Cards>,
-            loader: ()=> fetch('../gadgets.json'),
+            loader: ()=> fetch('/gadgets.json'),
           },
-        ]
+        ],
+       
       },
       {
         path: "/details/:id",
         element: <ProductDetails></ProductDetails>,
-        loader: ()=> fetch('../gadgets.json'),
-      }
+        loader: ()=> fetch('/gadgets.json'),
+      },
     ]
   },
   {

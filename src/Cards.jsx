@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
 import Card from './Card';
 
 const Cards = () => {
@@ -8,13 +8,16 @@ const Cards = () => {
 
     const [allData, setData] = useState(allGadgets);
 
+    const navigate = useNavigate()
+
 
     useEffect(()=>{
         if (!category) {
             setData([...allGadgets].slice(0,7))
             
         }
-        else if (category == 'All Product' || !category) {
+
+        else if (category == 'All Product') {
             setData(allGadgets)
             // console.log(category);
             
@@ -24,7 +27,7 @@ const Cards = () => {
         }
     },[category,allGadgets])
 
-    // console.log(category);
+    // console.log(allData.length);
 
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
