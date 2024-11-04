@@ -1,7 +1,12 @@
 import React from 'react';
 import banner from './assets/banner.jpg'
+import { Outlet, useLoaderData } from 'react-router-dom';
+import CategoriesSidebar from './CategoriesSidebar';
 
 const Home = () => {
+    const categories = useLoaderData()
+    // console.log(categories);
+
     return (
         <div>
             <div className='w-[98%] mx-auto bg-[#9538E2] rounded-b-3xl relative'>
@@ -21,16 +26,23 @@ const Home = () => {
             </div>
             {/* Parent of Home page children */}
             <div className='pt-[160px] md:pt-[300px] lg:pt-[400px] w-[98%] mx-auto'>
-                <h1 className='font-bold text-2xl lg:text-[40px] text-[#0B0B0B] text-center'>Explore Cutting-Edge Gadgets</h1>
+                <h1 className='font-bold text-2xl lg:text-[40px] text-[#0B0B0B] text-center mb-6 lg:mb-12'>Explore Cutting-Edge Gadgets</h1>
                 {/* Card section */}
-                <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6'>
-                    <div className='col-span-1 md:col-span-1 lg:col-span-1 '>
-
+                <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6'>
+                    {/* Categories Sidebar */}
+                    <div className='col-span-1 md:col-span-1 lg:col-span-1 space-y-5'>
+                        {
+                            categories.map((item) => <CategoriesSidebar key={item.id} category={item}></CategoriesSidebar>)
+                        }
                     </div>
+                    {/* Gadgets Cards */}
                     <div className='col-span-1 md:col-span-3 lg:col-span-5'>
-                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
 
+                        <div>
+                            <Outlet></Outlet>
                         </div>
+
+
                     </div>
                 </div>
             </div>

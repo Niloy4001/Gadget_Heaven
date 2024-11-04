@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="">
+        <footer className=" mt-14 md:mt-28">
             <div>
                 <h1 className='font-bold text-[32px] text-[#09080F] text-center'>Gadget Heaven</h1>
                 <p className='font-medium mt-3 text-[16px] text-[#09080F99] text-center mb-10'>Leading the way in cutting-edge technology and innovation.</p>
