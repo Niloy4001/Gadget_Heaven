@@ -9,5 +9,6 @@ body{
 .active{
   padding: 12px;
   background-color: #0b0b0b59;
+  /* color: #9538E2; */
   border-radius: 12px;
 }

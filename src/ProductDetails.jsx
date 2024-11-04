@@ -3,6 +3,9 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline, IoEllipseSharp } from "react-icons/io5";
 import { Rating, Star } from '@smastrom/react-rating'
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 import '@smastrom/react-rating/style.css'
 import { CartContext, WishListContext } from './Root';
@@ -13,6 +16,15 @@ const myStyles = {
   }
 
 const ProductDetails = () => {
+
+    // toast
+    const notifyForSuccess = () => toast.success("Successfully Added to Cart");
+    const notifyForRejection = () => toast.error("Already Exist");
+    const notifyForSuccessWhishList = () => toast.success("Successfully Added to Wish List");
+
+
+
+
     const allData = useLoaderData();
     const { id } = useParams();
     const [singleData, setSingleData] = useState({})
@@ -26,10 +38,11 @@ const ProductDetails = () => {
     const handleAddToCart = (gadget) =>{
         const isExist = cartItem.find((item)=>item.product_id == gadget.product_id)
         if (isExist) {
-            return alert('already exist')
+            return notifyForRejection()
         }
         else{
             setCartItem([...cartItem,gadget])
+            notifyForSuccess()
         }
         
         
@@ -39,10 +52,11 @@ const ProductDetails = () => {
     const handleWishList = (gadget) =>{
         const isExist = wishItem.find((item)=>item.product_id == gadget.product_id)
         if (isExist) {
-            return alert('already exist')
+            return notifyForRejection()
         }
         else{
             setWishItem([...wishItem,gadget])
+            notifyForSuccessWhishList()
         }
                
     }
@@ -56,11 +70,13 @@ const ProductDetails = () => {
     }, [])
 
     
+
+
     return (
         <div>
             <div className='w-[98%] mx-auto bg-[#9538E2] rounded-b-3xl relative'>
-                <div className='w-[98%]  lg:w-[90%] mx-auto pb-72'>
-                    <h1 className="leading-[34px] lg:leading-[60px] font-bold text-3xl lg:text-[56px] text-white text-center mb-6">Product Details</h1>
+                <div className='w-[98%]  lg:w-[90%] mx-auto pb-72 pt-8'>
+                    <h1 className="leading-[34px] lg:leading-[60px] font-bold text-2xl lg:text-[32px] text-white text-center mb-6">Product Details</h1>
                     <p className="font-normal text-base text-white text-center mb-6">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
 
                 </div>
@@ -107,6 +123,7 @@ const ProductDetails = () => {
             <div className='h-[565px] lg:h-[400px] bg-[#ECECEC]'>
 
             </div>
+            <ToastContainer />
         </div>
     );
 };

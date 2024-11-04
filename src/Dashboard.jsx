@@ -28,7 +28,7 @@ const Dashboard = () => {
         <div>
             {/* dashboard banner */}
             <div className='w-[98%] mx-auto bg-[#9538E2]  relative'>
-                <div className='w-[98%]  lg:w-[90%] mx-auto pb-14'>
+                <div className='w-[98%]  lg:w-[90%] mx-auto pb-14 pt-8'>
                     <h1 className="leading-[34px] lg:leading-[60px] font-bold text-3xl lg:text-[56px] text-white text-center mb-6">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
                     <p className="font-normal text-base text-white text-center mb-6">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
                     <div className='pt-9 flex justify-center items-center gap-5'>

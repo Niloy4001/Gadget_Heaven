@@ -14,9 +14,10 @@ const Root = () => {
         <>
             <CartContext.Provider value={{cartItem, setCartItem}}>
                 <WishListContext.Provider value={{wishItem, setWishItem}}>
-                <div className='w-[98%] mx-auto rounded-t-3xl bg-[#9538E2]'>
-                    <Navbar></Navbar>
-                </div>
+                <Navbar></Navbar>
+                {/* <div className='w-[98%] mx-auto rounded-t-3xl bg-[#9538E2]'>
+                    
+                </div> */}
                 <div className='w-full'>
                     <Outlet></Outlet>
                 </div>

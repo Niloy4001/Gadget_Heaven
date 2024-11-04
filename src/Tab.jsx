@@ -1,8 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { CartContext } from './Root';
+// import { ToastContainer, toast } from 'react-toastify';
 
-const Tab = ({ product,tab }) => {
-    const { product_title, product_image, price, description } = product
+const Tab = ({ product, tab }) => {
+    
+    // toast
+    // const notifyForSuccess = () => toast.success("Successfully Added to Cart");
+    // const notifyForRejection = () => toast.error("Already Exist");
+
+
+
+    const {cartItem, setCartItem} = useContext(CartContext)
+    const { product_title, product_image, price, description } = product || {}
+
+    const handleAddToCart = (product) => {
+        const isExist = cartItem.find((item) => item.product_id == product.product_id)
+        if (isExist) {
+            // notifyForRejection()
+            return 
+        }
+        else {
+            // notifyForSuccess()
+            setCartItem([...cartItem, product])
+            
+        }
+
+
+
+    }
     return (
         <div className='p-5 lg:p-[32px] flex flex-col md:flex-row items-center gap-6 rounded-2xl'>
             <div>
@@ -16,9 +42,12 @@ const Tab = ({ product,tab }) => {
                 <p className='font-normal lg:text-lg text-[#09080F99] mb-4'>{description} </p>
                 <p className='font-semibold lg:text-xl text-[#09080FCC] mb-4'>Price: $ {price}</p>
                 {
-                    !tab && <button className='btn bg-[#9538E2] text-white'>Add to Card</button> 
+                    !tab && <button
+                        onClick={() =>handleAddToCart(product)}
+                        className='btn bg-[#9538E2] text-white'>Add to Card</button>
                 }
             </div>
+            {/* <ToastContainer /> */}
         </div>
     );
 };
