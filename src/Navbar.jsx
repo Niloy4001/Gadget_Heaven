@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { ImMenu3 } from "react-icons/im";
+import { RiMenu5Line } from "react-icons/ri";
+import { IoCloseOutline } from "react-icons/io5";
 import { CartContext, WishListContext } from './Root';
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
     const handleMenu = () => {
         setOpen(!open)
     }
@@ -20,17 +21,21 @@ const Navbar = () => {
     return (
         <div className={`w-[98%] mx-auto rounded-t-3xl ${pathname == '/' ? 'bg-[#9538E2]' : ''} `}>
             <div className="navbar flex justify-between py-8  w-[90%] mx-auto gap-4">
+                {/* logo */}
                 <div className="flex">
-                    <p className={`text-xl font-bold  ${pathname === '/'? 'text-white': 'text-[#9538E2]'}`}>Gadget Heaven</p>
+                    <p className={`text-xl font-bold  ${pathname === '/' ? 'text-white' : 'text-[#9538E2]'}`}>Gadget Heaven</p>
                 </div>
-                <div className={`lg:flex flex-col lg:flex-row items-center absolute lg:static gap-3 lg:gap-12  ${open ? 'top-20 left-28' : 'hidden'}`}>
-                    <NavLink to={"/"}><p className={`${pathname === '/'? 'text-white':'text-[#9538E2]'}  font-bold text-base`}>Home</p></NavLink>
-                    <NavLink to={"/statistics"}><p className={`${pathname === '/'? 'text-white':'text-[#9538E2]'}  font-bold text-base`}>Statistics</p></NavLink>
-                    <NavLink to={"/dashboard"}><p className={`${pathname === '/'? 'text-white':'text-[#9538E2]'}  font-bold text-base`}>Dashboard</p></NavLink>
+                {/* menu icon */}
+                <div className={`text-2xl lg:hidden ${pathname == '/' ? 'text-white' : 'text-[#9538E2]'}`} onClick={() => handleMenu()}>
+                    {open ? < RiMenu5Line /> : <IoCloseOutline />}
                 </div>
-                <div className='text-2xl lg:hidden' onClick={() => handleMenu()}>
-                    <ImMenu3 />
+                {/* pages link */}
+                <div className={`flex lg:items-center lg:static lg:gap-12 lg:flex-row flex-col absolute ${open ? '-top-44' : 'top-24'} duration-1000 left-[35%] z-50 ${pathname === '/' ? 'bg-[#9538E2]' : 'bg-white'} lg:bg-transparent rounded-lg gap-4 px-3 py-3`}>
+                    <NavLink to={"/"}><p className={`${pathname === '/' ? 'text-white' : 'text-[#9538E2]'}  font-bold text-base`}>Home</p></NavLink>
+                    <NavLink to={"/statistics"}><p className={`${pathname === '/' ? 'text-white' : 'text-[#9538E2]'}  font-bold text-base`}>Statistics</p></NavLink>
+                    <NavLink to={"/dashboard"}><p className={`${pathname === '/' ? 'text-white' : 'text-[#9538E2]'}  font-bold text-base`}>Dashboard</p></NavLink>
                 </div>
+                {/* cart and wishlist */}
                 <div className="flex items-center gap-2">
                     {/* cart */}
                     <div className="dropdown dropdown-end">

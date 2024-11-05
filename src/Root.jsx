@@ -12,16 +12,18 @@ const Root = () => {
     const [wishItem, setWishItem] = useState([])
     return (
         <>
-            <CartContext.Provider value={{cartItem, setCartItem}}>
-                <WishListContext.Provider value={{wishItem, setWishItem}}>
-                <Navbar></Navbar>
-                {/* <div className='w-[98%] mx-auto rounded-t-3xl bg-[#9538E2]'>
+            <CartContext.Provider value={{ cartItem, setCartItem }}>
+                <WishListContext.Provider value={{ wishItem, setWishItem }}>
+                    <div className='bg-[#F7F7F7] '>
+                        <Navbar></Navbar>
+                        {/* <div className='w-[98%] mx-auto rounded-t-3xl bg-[#9538E2]'>
                     
                 </div> */}
-                <div className='w-full'>
-                    <Outlet></Outlet>
-                </div>
-                <Footer></Footer>
+                        <div className='w-full min-h-[calc(100vh-432px)]'>
+                            <Outlet></Outlet>
+                        </div>
+                    </div>
+                    <Footer></Footer>
                 </WishListContext.Provider>
             </CartContext.Provider>
         </>
