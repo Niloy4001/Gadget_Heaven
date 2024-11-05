@@ -4,6 +4,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline, IoEllipseSharp } from "react-icons/io5";
 import { Rating, Star } from '@smastrom/react-rating'
 import { ToastContainer, toast } from 'react-toastify';
+import { FaStar } from "react-icons/fa";
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -110,7 +111,7 @@ const ProductDetails = () => {
                                         Specification?.map((item, index) => <li key={index}>{item}</li>)
                                     }
                                 </ul>
-                                <p className='font-bold lg:text-lg text-[#09080F] mb-3'>Rating: </p>
+                                <p className='font-bold lg:text-lg text-[#09080F] mb-3 flex items-center gap-2'><span>Rating:</span> <span className='text-base text-[#F9C004]'><FaStar /></span></p>
                                 <div className='flex items-center gap-4'>
                                     <span><Rating style={{ maxWidth: 130 }} readOnly value={rating} itemStyles={myStyles} /></span>
                                     <button className='btn btn-xs rounded-full'><span>{rating}</span></button>
@@ -122,7 +123,7 @@ const ProductDetails = () => {
                                         className='btn flex items-center gap-2 bg-[#9538E2] text-white rounded-3xl hover:bg-transparent hover:text-black'><span>Add To Card</span><span><IoCartOutline /></span></button>
                                     <button
                                         disabled={!wish && true}
-                                        className='text-3xl'
+                                        className='btn text-lg border border-solid border-[#0B0B0B] rounded-full  hover:bg-[#9538E2] hover:text-white'
                                         onClick={() => handleWishList(singleData)}
                                     ><FaRegHeart /></button>
                                 </div>
