@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import '@smastrom/react-rating/style.css'
 import { CartContext, WishListContext } from './Root';
+import { Helmet } from 'react-helmet';
 const myStyles = {
     itemShapes: Star,
     activeFillColor: '#ffb700',
@@ -18,9 +19,9 @@ const myStyles = {
 const ProductDetails = () => {
 
     // toast
-    const notifyForSuccess = () => toast.success("Successfully Added to Cart");
-    const notifyForRejection = () => toast.error("Already Exist");
-    const notifyForSuccessWhishList = () => toast.success("Successfully Added to Wish List");
+    const notifyForSuccess = () => toast.success("Successfully Added to Cart",{ position: "top-center"});
+    const notifyForRejection = () => toast.error("Already Exist",{ position:"top-center"});
+    const notifyForSuccessWhishList = () => toast.success("Successfully Added to Wish List",{ position: "top-center"});
 
 
 
@@ -74,6 +75,10 @@ const ProductDetails = () => {
 
     return (
         <div>
+            {/* helmet */}
+            <Helmet>
+                <title>Details | Gadget Heaven</title>
+            </Helmet>
             <div className='w-[98%] mx-auto bg-[#9538E2] rounded-b-3xl relative'>
                 <div className='w-[98%]  lg:w-[90%] mx-auto pb-72 pt-8'>
                     <h1 className="leading-[34px] lg:leading-[60px] font-bold text-2xl lg:text-[32px] text-white text-center mb-6">Product Details</h1>

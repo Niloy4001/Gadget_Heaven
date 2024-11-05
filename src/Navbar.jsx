@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { RiMenu5Line } from "react-icons/ri";
 import { IoCloseOutline } from "react-icons/io5";
 import { CartContext, WishListContext } from './Root';
@@ -11,6 +11,8 @@ const Navbar = () => {
     }
 
     const { pathname } = useLocation()
+
+    const navigate = useNavigate()
 
 
 
@@ -35,7 +37,7 @@ const Navbar = () => {
                     <NavLink to={"/statistics"}><p className={`${pathname === '/' ? 'text-white' : 'text-[#9538E2]'}  font-bold text-base`}>Statistics</p></NavLink>
                     <NavLink to={"/dashboard"}><p className={`${pathname === '/' ? 'text-white' : 'text-[#9538E2]'}  font-bold text-base`}>Dashboard</p></NavLink>
                 </div>
-                {/* cart and wishlist */}
+                {/* cartList and wishlist */}
                 <div className="flex items-center gap-2">
                     {/* cart */}
                     <div className="dropdown dropdown-end">
@@ -76,7 +78,9 @@ const Navbar = () => {
                                 <span className="text-lg font-bold">{cartItem.length} Items</span>
                                 <span className="text-info">Subtotal: ${cartItem.reduce((accumulator, item) => accumulator + item.price, 0)}</span>
                                 <div className="card-actions">
-                                    <button className="btn btn-primary btn-block">View cart</button>
+                                    <button 
+                                        onClick={() => navigate('/dashboard')}
+                                        className="btn btn-primary bg-[#9538E2] hover:bg-transparent hover:text-black btn-block">Dashboard</button>
                                 </div>
                             </div>
                         </div>

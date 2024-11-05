@@ -4,6 +4,7 @@ import Tab from './Tab';
 import { CartContext, WishListContext } from './Root';
 import modalImage from './assets/Group.png'
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 
 const Dashboard = () => {
@@ -64,6 +65,10 @@ const Dashboard = () => {
 
     return (
         <div>
+            {/* helmet */}
+            <Helmet>
+                <title>Dashboard | Gadget Heaven</title>
+            </Helmet>
             {/* dashboard banner */}
             <div className='w-[98%] mx-auto bg-[#9538E2]  relative'>
                 <div className='w-[98%]  lg:w-[90%] mx-auto pb-14 pt-8'>
