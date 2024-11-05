@@ -48,7 +48,7 @@ const Dashboard = () => {
 
 
     }
-    console.log(cartItem);
+  
 
 
     // handle Modal close button

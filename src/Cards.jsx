@@ -6,24 +6,28 @@ const Cards = () => {
     const allGadgets = useLoaderData()
     const { category } = useParams()
 
-    const [allData, setData] = useState(allGadgets);
 
-    const navigate = useNavigate()
+    const [allData, setAllData] = useState(allGadgets);
+
+
+
+
 
 
     useEffect(() => {
         if (!category) {
-            setData([...allGadgets].slice(0, 7))
+            setAllData([...allGadgets].slice(0, 7))
 
         }
 
-        else if (category == 'All Product') {
-            setData(allGadgets)
+        else if (category === 'All Product') {
+            setAllData(allGadgets)
             // console.log(category);
 
-        } else {
+        } 
+        else {
             const arr = [...allGadgets].filter((item) => item.category == category)
-            setData(arr)
+            setAllData(arr)
         }
     }, [category, allGadgets])
 
@@ -33,7 +37,12 @@ const Cards = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 
             {
+                allData.length> 0 ?
                 allData.map((item) => <Card key={item.product_id} gadget={item}></Card>)
+                :
+                <div className='flex justify-center items-center'>
+                    <p className='font-bold text-3xl text-[#09080F] '>No data found</p>
+                </div>
             }
 
 

@@ -12,6 +12,8 @@ import ProductDetails from './ProductDetails';
 import ErrorPage from './ErrorPage';
 import Dashboard from './Dashboard';
 import Statistics from './Statistics';
+import Support from './Support';
+
 
 
 
@@ -32,10 +34,10 @@ const router = createBrowserRouter([
             loader: () => fetch('/gadgets.json'),
           },
           {
-            path: "/category/:category",
+            path: "category/:category",
             element: <Cards></Cards>,
             loader: () => fetch('/gadgets.json'),
-          },
+          }
         ],
 
       },
@@ -53,10 +55,11 @@ const router = createBrowserRouter([
         path: "/dashboard",
         element: <Dashboard></Dashboard>
       },
+      {
+        path: "/support",
+        element:<Support></Support>
+      }
     ]
-  },
-  {
-    path: "statistics"
   }
 ]);
 

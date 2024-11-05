@@ -16,7 +16,7 @@ const Home = () => {
                 <title>Gadgets | Gadget Heaven</title>
             </Helmet>
             <div className='w-[98%] mx-auto bg-[#9538E2] rounded-b-3xl relative'>
-                <div className='w-[98%]  lg:w-[90%] mx-auto pb-72 '>
+                <div className='w-[98%]  lg:w-[90%] mx-auto pb-72 pt-7'>
                     <h1 className="leading-[34px] lg:leading-[60px] font-bold text-3xl lg:text-[56px] text-white text-center mb-6">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
                     <p className="font-normal text-base text-white text-center mb-6">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
                     <div className='text-center pt-9'>
@@ -38,7 +38,7 @@ const Home = () => {
                 {/* Card section */}
                 <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6'>
                     {/* Categories Sidebar */}
-                    <div className='col-span-1 md:col-span-1 lg:col-span-1 space-y-5 bg-white rounded-2xl'>
+                    <div className='col-span-1 md:col-span-1 lg:col-span-1 space-y-5 bg-white rounded-2xl py-6'>
                         {
                             categories.map((item) => <CategoriesSidebar key={item.id} category={item}></CategoriesSidebar>)
                         }

@@ -23,4 +23,9 @@
         "id": 6,
         "category": "MacBook"
     }
+    ,
+    {
+        "id": 7,
+        "category": "Camera"
+    }
 ]

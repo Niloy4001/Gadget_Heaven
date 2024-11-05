@@ -5,7 +5,7 @@ import { Area, Bar, CartesianGrid, ComposedChart, Legend, Line, ResponsiveContai
 
 const Statistics = () => {
     const allData = useLoaderData()
-    console.log(allData);
+    
 
     const data = [
         {

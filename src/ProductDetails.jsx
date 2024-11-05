@@ -49,16 +49,20 @@ const ProductDetails = () => {
 
 
     }
-
+    // handle heart button
+    const [wish, setWish] = useState(true)
     const handleWishList = (gadget) => {
         const isExist = wishItem.find((item) => item.product_id == gadget.product_id)
         if (isExist) {
-            return notifyForRejection()
+            // setWish(false)
+            return 
         }
         else {
             setWishItem([...wishItem, gadget])
             notifyForSuccessWhishList()
+            setWish(false)
         }
+        
 
     }
 
@@ -108,7 +112,7 @@ const ProductDetails = () => {
                                 </ul>
                                 <p className='font-bold lg:text-lg text-[#09080F] mb-3'>Rating: </p>
                                 <div className='flex items-center gap-4'>
-                                    <span><Rating style={{ maxWidth: 150 }} readOnly value={rating} itemStyles={myStyles} /></span>
+                                    <span><Rating style={{ maxWidth: 130 }} readOnly value={rating} itemStyles={myStyles} /></span>
                                     <button className='btn btn-xs rounded-full'><span>{rating}</span></button>
                                 </div>
                                 {/* <p>star</p> */}
@@ -117,6 +121,8 @@ const ProductDetails = () => {
                                         onClick={() => handleAddToCart(singleData)}
                                         className='btn flex items-center gap-2 bg-[#9538E2] text-white rounded-3xl hover:bg-transparent hover:text-black'><span>Add To Card</span><span><IoCartOutline /></span></button>
                                     <button
+                                        disabled={!wish && true}
+                                        className='text-3xl'
                                         onClick={() => handleWishList(singleData)}
                                     ><FaRegHeart /></button>
                                 </div>
