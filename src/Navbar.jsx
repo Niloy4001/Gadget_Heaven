@@ -78,7 +78,7 @@ const Navbar = () => {
                                 <span className="text-lg font-bold">{cartItem.length} Items</span>
                                 <span className="text-info">Subtotal: ${cartItem.reduce((accumulator, item) => accumulator + item.price, 0)}</span>
                                 <div className="card-actions">
-                                    <button 
+                                    <button
                                         onClick={() => navigate('/dashboard')}
                                         className="btn btn-primary bg-[#9538E2] hover:bg-transparent hover:text-black btn-block">Dashboard</button>
                                 </div>

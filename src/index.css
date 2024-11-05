@@ -2,13 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
+
+body {
   font-family: "Sora", sans-serif;
 }
 
-.active{
+.active {
   padding: 12px;
   background-color: #0b0b0b59;
- 
+
   border-radius: 12px;
 }

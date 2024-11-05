@@ -4,26 +4,26 @@ import { CartContext } from './Root';
 // import { ToastContainer, toast } from 'react-toastify';
 
 const Tab = ({ product, tab }) => {
-    
+
     // toast
     // const notifyForSuccess = () => toast.success("Successfully Added to Cart");
     // const notifyForRejection = () => toast.error("Already Exist");
 
 
 
-    const {cartItem, setCartItem} = useContext(CartContext)
+    const { cartItem, setCartItem } = useContext(CartContext)
     const { product_title, product_image, price, description } = product || {}
 
     const handleAddToCart = (product) => {
         const isExist = cartItem.find((item) => item.product_id == product.product_id)
         if (isExist) {
             // notifyForRejection()
-            return 
+            return
         }
         else {
             // notifyForSuccess()
             setCartItem([...cartItem, product])
-            
+
         }
 
 
@@ -43,7 +43,7 @@ const Tab = ({ product, tab }) => {
                 <p className='font-semibold lg:text-xl text-[#09080FCC] mb-4'>Price: $ {price}</p>
                 {
                     !tab && <button
-                        onClick={() =>handleAddToCart(product)}
+                        onClick={() => handleAddToCart(product)}
                         className='btn bg-[#9538E2] text-white'>Add to Card</button>
                 }
             </div>

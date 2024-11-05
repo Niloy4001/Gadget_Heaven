@@ -14,14 +14,14 @@ const myStyles = {
     itemShapes: Star,
     activeFillColor: '#ffb700',
     inactiveFillColor: '#ffffff'
-  }
+}
 
 const ProductDetails = () => {
 
     // toast
-    const notifyForSuccess = () => toast.success("Successfully Added to Cart",{ position: "top-center"});
-    const notifyForRejection = () => toast.error("Already Exist",{ position:"top-center"});
-    const notifyForSuccessWhishList = () => toast.success("Successfully Added to Wish List",{ position: "top-center"});
+    const notifyForSuccess = () => toast.success("Successfully Added to Cart", { position: "top-center" });
+    const notifyForRejection = () => toast.error("Already Exist", { position: "top-center" });
+    const notifyForSuccessWhishList = () => toast.success("Successfully Added to Wish List", { position: "top-center" });
 
 
 
@@ -33,36 +33,36 @@ const ProductDetails = () => {
     const { product_id, product_title, product_image, category, price, description, Specification, availability, rating } = singleData
 
     // context api
-    const {cartItem, setCartItem} = useContext(CartContext)
-    const {wishItem, setWishItem} = useContext(WishListContext)
-    
-    const handleAddToCart = (gadget) =>{
-        const isExist = cartItem.find((item)=>item.product_id == gadget.product_id)
+    const { cartItem, setCartItem } = useContext(CartContext)
+    const { wishItem, setWishItem } = useContext(WishListContext)
+
+    const handleAddToCart = (gadget) => {
+        const isExist = cartItem.find((item) => item.product_id == gadget.product_id)
         if (isExist) {
             return notifyForRejection()
         }
-        else{
-            setCartItem([...cartItem,gadget])
+        else {
+            setCartItem([...cartItem, gadget])
             notifyForSuccess()
         }
-        
-        
-        
+
+
+
     }
-    
-    const handleWishList = (gadget) =>{
-        const isExist = wishItem.find((item)=>item.product_id == gadget.product_id)
+
+    const handleWishList = (gadget) => {
+        const isExist = wishItem.find((item) => item.product_id == gadget.product_id)
         if (isExist) {
             return notifyForRejection()
         }
-        else{
-            setWishItem([...wishItem,gadget])
+        else {
+            setWishItem([...wishItem, gadget])
             notifyForSuccessWhishList()
         }
-               
+
     }
 
-    
+
 
     useEffect(() => {
         const filteredItem = allData.find((item) => item.product_id == id)
@@ -70,7 +70,7 @@ const ProductDetails = () => {
 
     }, [])
 
-    
+
 
 
     return (
@@ -103,21 +103,21 @@ const ProductDetails = () => {
                                 <p className='font-bold lg:text-lg text-[#09080F] mb-3'>Specification:</p>
                                 <ul className='font-normal lg:text-lg text-[#09080F99] mb-4 list-decimal list-inside'>
                                     {
-                                        Specification?.map((item,index)=> <li key={index}>{item}</li>)
+                                        Specification?.map((item, index) => <li key={index}>{item}</li>)
                                     }
                                 </ul>
                                 <p className='font-bold lg:text-lg text-[#09080F] mb-3'>Rating: </p>
                                 <div className='flex items-center gap-4'>
-                                    <span><Rating style={{ maxWidth: 150 }} readOnly value={rating} itemStyles={myStyles}/></span>
+                                    <span><Rating style={{ maxWidth: 150 }} readOnly value={rating} itemStyles={myStyles} /></span>
                                     <button className='btn btn-xs rounded-full'><span>{rating}</span></button>
                                 </div>
                                 {/* <p>star</p> */}
                                 <div className='mt-5 flex items-center gap-5'>
                                     <button
-                                    onClick={()=>handleAddToCart(singleData)} 
-                                    className='btn flex items-center gap-2 bg-[#9538E2] text-white rounded-3xl hover:bg-transparent hover:text-black'><span>Add To Card</span><span><IoCartOutline /></span></button>
+                                        onClick={() => handleAddToCart(singleData)}
+                                        className='btn flex items-center gap-2 bg-[#9538E2] text-white rounded-3xl hover:bg-transparent hover:text-black'><span>Add To Card</span><span><IoCartOutline /></span></button>
                                     <button
-                                    onClick={()=>handleWishList(singleData)}
+                                        onClick={() => handleWishList(singleData)}
                                     ><FaRegHeart /></button>
                                 </div>
                             </div>

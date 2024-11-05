@@ -27,7 +27,7 @@ const Footer = () => {
                     <p className="font-normal text-base text-[#09080F99] mb-2">Privacy Policy</p>
                     <p className="font-normal text-base text-[#09080F99] mb-2">Cookie Policy</p>
                 </div>
-               
+
             </div>
         </footer>
     );

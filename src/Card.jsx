@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Card = ({gadget}) => {
+const Card = ({ gadget }) => {
     // console.log(gadget);
-    const {product_image,product_title,price,product_id} = gadget
+    const { product_image, product_title, price, product_id } = gadget
     return (
         <div>
             <div className='p-5 rounded-2xl bg-white'>

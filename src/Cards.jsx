@@ -4,36 +4,36 @@ import Card from './Card';
 
 const Cards = () => {
     const allGadgets = useLoaderData()
-    const {category} = useParams()
+    const { category } = useParams()
 
     const [allData, setData] = useState(allGadgets);
 
     const navigate = useNavigate()
 
 
-    useEffect(()=>{
+    useEffect(() => {
         if (!category) {
-            setData([...allGadgets].slice(0,7))
-            
+            setData([...allGadgets].slice(0, 7))
+
         }
 
         else if (category == 'All Product') {
             setData(allGadgets)
             // console.log(category);
-            
-        }else{
-            const arr = [...allGadgets].filter((item)=> item.category == category)
+
+        } else {
+            const arr = [...allGadgets].filter((item) => item.category == category)
             setData(arr)
         }
-    },[category,allGadgets])
+    }, [category, allGadgets])
 
     // console.log(allData.length);
 
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-       
+
             {
-                allData.map((item) => <Card key={item.product_id} gadget={item}></Card> )
+                allData.map((item) => <Card key={item.product_id} gadget={item}></Card>)
             }
 
 

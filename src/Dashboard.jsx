@@ -12,20 +12,20 @@ const Dashboard = () => {
     //  useContext hook
     const { cartItem, setCartItem } = useContext(CartContext)
     const { wishItem, setWishItem } = useContext(WishListContext)
-   
+
     // total amount
-    const [subTotal, setSubTotal] = useState(0)    
-    useEffect(()=>{
-        if (cartItem.length>0) {
+    const [subTotal, setSubTotal] = useState(0)
+    useEffect(() => {
+        if (cartItem.length > 0) {
             const total = cartItem.reduce((accumulator, item) => accumulator + item.price, 0)
-            setSubTotal(total)      
+            setSubTotal(total)
         }
-    },[cartItem])
-   
-//    const total = cartItem?.reduce((accumulator, item) => accumulator + item.price, 0)
-   
-   
-   //    handle tab functionality
+    }, [cartItem])
+
+    //    const total = cartItem?.reduce((accumulator, item) => accumulator + item.price, 0)
+
+
+    //    handle tab functionality
     const [tab, setTab] = useState(true)
     const handleTab = (status) => {
         setTab(status)
@@ -41,15 +41,15 @@ const Dashboard = () => {
     }
 
     // handle purchase button
-    const handlePurchase = () =>{
+    const handlePurchase = () => {
         document.getElementById('my_modal_1').showModal()
         setCartItem([])
         // console.log(cartItem);
-        
+
 
     }
     console.log(cartItem);
-    
+
 
     // handle Modal close button
     const navigate = useNavigate()
@@ -72,7 +72,7 @@ const Dashboard = () => {
             {/* dashboard banner */}
             <div className='w-[98%] mx-auto bg-[#9538E2]  relative'>
                 <div className='w-[98%]  lg:w-[90%] mx-auto pb-14 pt-8'>
-                    <h1 className="leading-[34px] lg:leading-[60px] font-bold text-3xl lg:text-[56px] text-white text-center mb-6">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
+                    <h1 className="leading-[34px] lg:leading-[60px] font-bold text-2xl lg:text-[32px] text-white text-center mb-6">Dashboard</h1>
                     <p className="font-normal text-base text-white text-center mb-6">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
                     <div className='pt-9 flex justify-center items-center gap-5'>
                         <button
@@ -95,11 +95,11 @@ const Dashboard = () => {
                                 <p className='text-2xl font-bold text-[#0B0B0B]'>Total cost: ${cartItem?.reduce((accumulator, item) => accumulator + item.price, 0)}</p>
                                 {/* <p className='text-2xl font-bold text-[#0B0B0B]'>Total cost: {subTotal}</p> */}
                                 <button
-                                    disabled={cartItem.length === 0 ? true: false}
+                                    disabled={cartItem.length === 0 ? true : false}
                                     onClick={() => handleSort()}
                                     className='btn rounded-3xl flex items-center gap-2 text-[#9538E2] border border-solid border-[#9538E2] hover:text-white hover:bg-[#9538E2]'><span>Sort by Price</span><span><RiSoundModuleFill /></span></button>
                                 <button
-                                    disabled={cartItem.length === 0 ? true: false}
+                                    disabled={cartItem.length === 0 ? true : false}
                                     onClick={() => handlePurchase()}
                                     className='btn rounded-3xl text-[#9538E2] border border-solid border-[#9538E2] hover:text-white hover:bg-[#9538E2]'>Purchase</button>
                             </div>
@@ -121,12 +121,12 @@ const Dashboard = () => {
                             <div className='border-b border-solid border-[#09080F1A] my-3'></div>
                             <p className="mb-4 font-medium text-base text-[#09080F99] text-center">Thanks for purchasing.</p>
                             {/* <p className=" font-medium text-base text-[#09080F99] text-center">Total: {`${cartItem?.reduce((accumulator, item) => accumulator + item.price, 0)}`}</p> */}
-                            <p className=" font-medium text-base text-[#09080F99] text-center">Total: {subTotal }</p>
+                            <p className=" font-medium text-base text-[#09080F99] text-center">Total: {subTotal}</p>
                             <div className="modal-action">
                                 <form method="dialog" className='w-full'>
                                     {/* if there is a button in form, it will close the modal */}
-                                    <button 
-                                        onClick={()=> handleModalClose()}
+                                    <button
+                                        onClick={() => handleModalClose()}
                                         className="btn w-full rounded-3xl font-medium text-base">Close</button>
                                 </form>
                             </div>
