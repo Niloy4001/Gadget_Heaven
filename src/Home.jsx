@@ -33,7 +33,7 @@ const Home = () => {
                 </div>
             </div>
             {/* Parent of Home page children */}
-            <div className='pt-[160px] md:pt-[300px] lg:pt-[400px] w-[98%] mx-auto px-5'>
+            <div className='pt-[160px] md:pt-[300px] lg:pt-[400px] w-[98%] mx-auto px-5 pb-12 md:pb-28'>
                 <h1 className='font-bold text-2xl lg:text-[40px] text-[#0B0B0B] text-center mb-6 lg:mb-12'>Explore Cutting-Edge Gadgets</h1>
                 {/* Card section */}
                 <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6'>
