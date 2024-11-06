@@ -20,9 +20,9 @@ const myStyles = {
 const ProductDetails = () => {
 
     // toast
-    const notifyForSuccess = () => toast.success("Successfully Added to Cart", { position: "top-center" });
-    const notifyForRejection = () => toast.error("Already Exist", { position: "top-center" });
-    const notifyForSuccessWhishList = () => toast.success("Successfully Added to Wish List", { position: "top-center" });
+    const notifyForSuccess = () => toast.success("Successfully Added to Cart", { position: "top-center", autoClose: 1000 });
+    const notifyForRejection = () => toast.error("Already Exist", { position: "top-center", autoClose: 1000 });
+    const notifyForSuccessWhishList = () => toast.success("Successfully Added to Wish List", { position: "top-center", autoClose: 1000 });
 
 
 
@@ -56,14 +56,14 @@ const ProductDetails = () => {
         const isExist = wishItem.find((item) => item.product_id == gadget.product_id)
         if (isExist) {
             // setWish(false)
-            return 
+            return
         }
         else {
             setWishItem([...wishItem, gadget])
             notifyForSuccessWhishList()
             setWish(false)
         }
-        
+
 
     }
 
@@ -135,7 +135,6 @@ const ProductDetails = () => {
             <div className='h-[565px] lg:h-[400px] bg-[#ECECEC]'>
 
             </div>
-            <ToastContainer />
         </div>
     );
 };
