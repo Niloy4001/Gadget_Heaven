@@ -2,7 +2,7 @@ import React from 'react';
 
 const Accordion = () => {
     return (
-        <div>
+        <div className='w-full lg:w-[70%] mx-auto'>
             <div className="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" defaultChecked />
                 <div className="collapse-title text-xl font-medium">1. What types of products are available on Gadget Heaven?</div>

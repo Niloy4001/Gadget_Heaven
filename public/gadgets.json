@@ -2,7 +2,7 @@
     {
         "product_id": 1,
         "product_title": "Dell XPS 13",
-        "product_image": "https://i.ibb.co.com/yShCNV2/Dell-XPS-13.jpg",
+        "product_image": "https://i.ibb.co/ChjQ1ZM/Dell-XPS-13.jpg",
         "category": "Laptops",
         "price": 1200,
         "description": "A high-performance laptop with a stunning display and compact design.",
@@ -18,7 +18,7 @@
     {
         "product_id": 2,
         "product_title": "MacBook Air M1",
-        "product_image": "https://i.ibb.co.com/pxPxtyR/Mac-Book-Air-M1.jpg",
+        "product_image": "https://i.ibb.co/HNZJC7M/Mac-Book-Air-M1.jpg",
         "category": "Laptops",
         "price": 999,
         "description": "Apple's thin and light laptop powered by the M1 chip.",
@@ -34,7 +34,7 @@
     {
         "product_id": 3,
         "product_title": "HP Spectre x360",
-        "product_image": "https://i.ibb.co.com/k28hZ6L/HP-Spectre-x360.jpg",
+        "product_image": "https://i.ibb.co/7RszxQx/HP-Spectre-x360.jpg",
         "category": "Laptops",
         "price": 1300,
         "description": "A versatile 2-in-1 laptop with a premium design and powerful performance.",
@@ -50,7 +50,7 @@
     {
         "product_id": 4,
         "product_title": "iPhone 13 Pro",
-        "product_image": "https://i.ibb.co.com/JrkSkXT/i-Phone-13.jpg",
+        "product_image": "https://i.ibb.co/DD3F3mS/i-Phone-13-Pro.jpg",
         "category": "Phones",
         "price": 999,
         "description": "Apple's flagship smartphone with advanced camera features and performance.",
@@ -65,7 +65,7 @@
     {
         "product_id": 5,
         "product_title": "Samsung Galaxy S21",
-        "product_image": "https://i.ibb.co.com/KGMLcDF/Samsung-Galaxy-S21.jpg",
+        "product_image": "https://i.ibb.co/qYBNrwm/Samsung-Galaxy-S21.jpg",
         "category": "Phones",
         "price": 799,
         "description": "Samsung's powerful smartphone with a high-quality display and camera.",
@@ -80,7 +80,7 @@
     {
         "product_id": 6,
         "product_title": "Google Pixel 6",
-        "product_image": "https://i.ibb.co.com/LddNmjN/Google-Pixel-6.jpg",
+        "product_image": "https://i.ibb.co/ykcwX3s/Google-Pixel-6.jpg",
         "category": "Phones",
         "price": 599,
         "description": "Google's latest smartphone with advanced AI features.",
@@ -95,7 +95,7 @@
     {
         "product_id": 7,
         "product_title": "AirPods Pro",
-        "product_image": "https://i.ibb.co.com/19kXY32/Air-Pods-Pro.jpg",
+        "product_image": "https://i.ibb.co/Pthp9J6/Air-Pods-Pro.jpg",
         "category": "Accessories",
         "price": 249,
         "description": "Apple's premium noise-canceling wireless earbuds.",
@@ -110,7 +110,7 @@
     {
         "product_id": 8,
         "product_title": "Samsung Galaxy Buds Pro",
-        "product_image": "https://i.ibb.co.com/YkPhHK3/Samsung-Galaxy-Buds-Pro.jpg",
+        "product_image": "https://i.ibb.co/25qZP9C/Samsung-Galaxy-Buds-Pro.jpg",
         "category": "Accessories",
         "price": 199,
         "description": "Samsung's high-quality wireless earbuds with active noise cancellation.",
@@ -125,7 +125,7 @@
     {
         "product_id": 9,
         "product_title": "Sony WH-1000XM4",
-        "product_image": "https://i.ibb.co.com/g71wYpv/Sony-WH-1000-XM4.jpg",
+        "product_image": "https://i.ibb.co/kM2vPpR/Sony-WH-1000-XM4.jpg",
         "category": "Accessories",
         "price": 349,
         "description": "Sony's top-rated noise-canceling headphones with excellent sound quality.",
@@ -140,7 +140,7 @@
     {
         "product_id": 10,
         "product_title": "Apple Watch Series 7",
-        "product_image": "https://i.ibb.co.com/tpD2kHm/Apple-Watch-Series-7.jpg",
+        "product_image": "https://i.ibb.co/mBqCFCp/Apple-Watch-Series-7.jpg",
         "category": "Smart Watches",
         "price": 399,
         "description": "Apple's latest smartwatch with an always-on display and advanced health tracking.",
@@ -155,7 +155,7 @@
     {
         "product_id": 11,
         "product_title": "Samsung Galaxy Watch 4",
-        "product_image": "https://i.ibb.co.com/y6pxLGq/Samsung-Galaxy-Watch-4.jpg",
+        "product_image": "https://i.ibb.co/Sfm4cgt/Samsung-Galaxy-Watch-4.jpg",
         "category": "Smart Watches",
         "price": 249,
         "description": "Samsung's smartwatch with advanced health and fitness tracking features.",
@@ -170,7 +170,7 @@
     {
         "product_id": 12,
         "product_title": "Fitbit Versa 3",
-        "product_image": "https://i.ibb.co.com/DYvQvL9/Fitbit-Versa-3.jpg",
+        "product_image": "https://i.ibb.co/VmtCGd6/Fitbit-Versa-3.jpg",
         "category": "Smart Watches",
         "price": 229,
         "description": "A fitness-focused smartwatch with built-in GPS and heart rate monitoring.",
@@ -185,7 +185,7 @@
     {
         "product_id": 13,
         "product_title": "MacBook Pro 14-inch",
-        "product_image": "https://i.ibb.co.com/Ms6RsmZ/Mac-Book-Pro-14-inch.jpg",
+        "product_image": "https://i.ibb.co/vczrj8Y/Mac-Book-Pro-14-inch.jpg",
         "category": "MacBook",
         "price": 1999,
         "description": "Apple's powerful MacBook Pro with the new M1 Pro chip for professionals.",
@@ -201,7 +201,7 @@
     {
         "product_id": 14,
         "product_title": "MacBook Air M2",
-        "product_image": "https://i.ibb.co.com/nzSFRpz/Mac-Book-Air-M2.jpg",
+        "product_image": "https://i.ibb.co/HNZJC7M/Mac-Book-Air-M1.jpg",
         "category": "MacBook",
         "price": 1199,
         "description": "A lightweight and powerful MacBook Air powered by the M2 chip.",
@@ -217,7 +217,7 @@
     {
         "product_id": 15,
         "product_title": "MacBook Pro 16-inch",
-        "product_image": "https://i.ibb.co.com/C1LxXVf/Mac-Book-Pro-16-inch.jpg",
+        "product_image": "https://i.ibb.co/ZKyz8bm/Mac-Book-Pro-16-inch.jpg",
         "category": "MacBook",
         "price": 2499,
         "description": "Apple's high-end MacBook Pro with a large display and powerful performance.",

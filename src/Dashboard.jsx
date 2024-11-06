@@ -77,7 +77,7 @@ const Dashboard = () => {
                     <div className='pt-9 flex justify-center items-center gap-5'>
                         <button
                             onClick={() => handleTab(true)}
-                            className={`btn rounded-3xl hover:bg-white hover:text-[#9538E2] ${tab ? 'bg-white text-[#9538E2]' : 'bg-transparent text-white'}`}>Cart </button>
+                            className={`w-[75px] btn rounded-3xl hover:bg-white hover:text-[#9538E2] ${tab ? 'bg-white text-[#9538E2]' : 'bg-transparent text-white'}`}>Cart </button>
                         <button
                             onClick={() => handleTab(false)}
                             className={`btn rounded-3xl hover:bg-white hover:text-[#9538E2]  ${!tab ? 'bg-white text-[#9538E2]' : 'bg-transparent text-white'}`}>Wishlist</button>
