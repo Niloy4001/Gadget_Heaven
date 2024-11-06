@@ -6,9 +6,8 @@ import { toast } from 'react-toastify';
 const Tab = ({ product, tab }) => {
 
     // toast
-    const notifyForSuccess = () => toast.success("Successfully Added to Cart", { position: 'top-center', autoClose: 1000 });
-    const notifyForDelete = () => toast.warning("Item Deleted", { position: 'top-center', autoClose: 1000 });
-    // const notifyForRejection = () => toast.error("Already Exist");
+    const notifyForSuccess = () => toast.success("Successfully Added to Cart", { position: 'top-center', autoClose: 2000 });
+    const notifyForDelete = () => toast.warning("Item Deleted", { position: 'top-center', autoClose: 2000 });
 
 
     // useContext hook

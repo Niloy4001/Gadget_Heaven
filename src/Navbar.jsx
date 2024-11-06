@@ -32,7 +32,7 @@ const Navbar = () => {
                     {open ? < RiMenu5Line /> : <IoCloseOutline />}
                 </div>
                 {/* pages link */}
-                <div className={`flex lg:items-center lg:static lg:gap-12 lg:flex-row flex-col absolute ${open ? '-top-44' : 'top-24'} duration-1000 left-[35%] z-50 ${pathname !== '/statistics' && pathname !== '/dashboard' && pathname !== '/support' ? 'bg-[#9538E2]' : 'bg-white'} lg:bg-transparent rounded-lg gap-4 px-3 py-3`}>
+                <div className={`flex lg:items-center lg:static lg:gap-12 lg:flex-row flex-col absolute ${open ? '-top-80' : 'top-24'} duration-1000 left-[35%] z-50 ${pathname !== '/statistics' && pathname !== '/dashboard' && pathname !== '/support' ? 'bg-[#9538E2]' : 'bg-white'} lg:bg-transparent rounded-lg gap-4 px-3 py-3`}>
                     <NavLink to={"/"}><p className={`${pathname !== '/statistics' && pathname !== '/dashboard' && pathname !== '/support' ? 'text-white' : 'text-[#9538E2]'}  font-bold text-base`}>Home</p></NavLink>
                     <NavLink to={"/statistics"}><p className={`${pathname !== '/statistics' && pathname !== '/dashboard' && pathname !== '/support' ? 'text-white' : 'text-[#9538E2]'}  font-bold text-base`}>Statistics</p></NavLink>
                     <NavLink to={"/dashboard"}><p className={`${pathname !== '/statistics' && pathname !== '/dashboard' && pathname !== '/support' ? 'text-white' : 'text-[#9538E2]'}  font-bold text-base`}>Dashboard</p></NavLink>

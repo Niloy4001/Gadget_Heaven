@@ -20,9 +20,9 @@ const myStyles = {
 const ProductDetails = () => {
 
     // toast
-    const notifyForSuccess = () => toast.success("Successfully Added to Cart", { position: "top-center", autoClose: 1000 });
-    const notifyForRejection = () => toast.error("Already Exist", { position: "top-center", autoClose: 1000 });
-    const notifyForSuccessWhishList = () => toast.success("Successfully Added to Wish List", { position: "top-center", autoClose: 1000 });
+    const notifyForSuccess = () => toast.success("Successfully Added to Cart", { position: "top-center", autoClose: 2000 });
+    const notifyForRejection = () => toast.error("Already Exist", { position: "top-center", autoClose: 2000 });
+    const notifyForSuccessWhishList = () => toast.success("Successfully Added to Wish List", { position: "top-center", autoClose: 2000 });
 
 
 
