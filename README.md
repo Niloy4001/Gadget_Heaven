@@ -117,22 +117,3 @@ Contributions are welcome! Follow these steps:
 
 ---
 
-## 📜 License  
-
-This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.  
-
----
-
-💡 *Gadget Heaven - The ultimate destination for gadget lovers!* 🛍️🚀  
-```
-
----
-
-### ✨ Enhancements in this README:  
-✔ **Visually structured** using emojis & headings for easy readability.  
-✔ **Clear and engaging descriptions** for features & dependencies.  
-✔ **Proper installation guide** with step-by-step setup.  
-✔ **Includes SEO, routing, and UI enhancements**.  
-✔ **Maintains a professional & polished format**.  
-
-Let me know if you'd like any modifications! 🚀
